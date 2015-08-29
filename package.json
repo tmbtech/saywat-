@@ -1,0 +1,39 @@
+{
+  "name": "react-systemjs-jspm-starter",
+  "version": "1.0.0",
+  "description": "Starter kit react, systemjs, jspm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmbtech/React-SystemJs-jspm-starter.git"
+  },
+  "keywords": [
+    "react",
+    "systemjs",
+    "jspm"
+  ],
+  "author": "Robert dela Victoria <robert.delavictoria@nfl.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmbtech/React-SystemJs-jspm-starter/issues"
+  },
+  "homepage": "https://github.com/tmbtech/React-SystemJs-jspm-starter#readme",
+  "devDependencies": {
+    "jspm": "^0.16.2"
+  },
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "react": "npm:react@^0.13.3",
+      "react-dom": "npm:react-dom@^0.14.0-beta3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.22",
+      "babel-runtime": "npm:babel-runtime@^5.8.20",
+      "core-js": "npm:core-js@^1.1.0"
+    }
+  }
+}
