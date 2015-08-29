@@ -3,6 +3,8 @@ System.config({
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
+    "sourceMaps": "inline",
+    "stage": 0,
     "blacklist": [],
     "optional": [
       "runtime",
