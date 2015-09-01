@@ -3,7 +3,7 @@
 This is a minimal start for using systemjs and jspm when building react components.
 
 This is not meant to be using in production, but as a starting point to making test 
-that are compiled using babel in the browser
+apps that are compiled using babel in the browser
 
 ## Install
 * clone this repository 
