@@ -56,7 +56,7 @@ class Main extends React.Component {
         <div>Welcome to ShitJoonSays!</div>
         <div>
           <form>
-            <h3 >What did she say today?!?!?</h3>
+            <h3 >What did he say today?!?!?</h3>
             <div>
               <label>Comment</label>
               <input type="text" ref="comment" />
