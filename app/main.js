@@ -28,9 +28,7 @@ class Main extends React.Component {
   renderComments = (comment) => {
     if (comment)
       return (
-        <span>
-          <p>{comment.comment} - {comment.timestamp}</p>
-        </span>
+        <li className="list-group-item">{comment.comment} - {comment.timestamp}</li>
       );
 
     return null;
@@ -52,21 +50,21 @@ class Main extends React.Component {
   render() {
     const {comments} = this.state;
     return (
-      <div>
-        <div>Welcome to ShitJoonSays!</div>
-        <div>
-          <form>
-            <h3 >What did he say today?!?!?</h3>
-            <div>
-              <label>Comment</label>
-              <input type="text" ref="comment" />
-            </div>
-            <div>
-              <input type="submit" value="Enter" onClick={this.onClick} />
-            </div>
-          </form>
-        </div>
-        <div>{comments.map(this.renderComments)}</div>
+      <div className="container">
+        <h1>Welcome to ShitJoonSays!</h1>
+        <h3>What did he say?</h3>
+        <form>
+          <div className="input-group">
+            <input className="form-control" placeholder="Comment..." type="text" ref="comment" />
+            <span className="input-group-btn">
+              <button className="btn btn-default" type="button" onClick={this.onClick}>Enter</button>
+            </span>
+          </div>
+        </form>
+        <ul className="list-group">
+          <li className="list-group-item list-group-item-danger">Say what?!</li>
+          {comments.map(this.renderComments)}
+        </ul>
       </div>
     )
   }
