@@ -1,5 +1,7 @@
 import React from "react";
 import Firebase from "firebase";
+import Rate from "./rate";
+import config from "./config";
 
 class Main extends React.Component {
   state = {
@@ -7,7 +9,7 @@ class Main extends React.Component {
   }
 
   componentWillMount() {
-    this.firebaseRef = new Firebase('https://shitjoonsays.firebaseio.com/quotes/');
+    this.firebaseRef = new Firebase(config.firebaseUrl);
     this.firebaseRef.on("child_added", this.childAdded);
   }
 
@@ -28,9 +30,10 @@ class Main extends React.Component {
   renderComments = (comment) => {
     if (comment)
       return (
-        <div style={style.quote}>
+        <div style={style.quote} key={comment.key}>
           <img src={`https://unsplash.it/300/125/?random&_${comment.key}`} />
-          <div style={{padding:40}}>
+          <Rate id={comment.key} />
+          <div style={{padding:"20px 40px 40px"}}>
             <p>"{comment.comment}"</p>
             <div style={{color:"rgb(54, 214, 120)"}}>{comment.timestamp}</div>
           </div>
