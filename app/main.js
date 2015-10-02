@@ -28,7 +28,13 @@ class Main extends React.Component {
   renderComments = (comment) => {
     if (comment)
       return (
-        <li className="list-group-item">{comment.comment} - {comment.timestamp}</li>
+        <div style={style.quote}>
+          <img src={`https://unsplash.it/300/175/?random&_${comment.key}`} />
+          <div style={{padding:40}}>
+            <p>"{comment.comment}"</p>
+            <div style={{color:"rgb(54, 214, 120)"}}>{comment.timestamp}</div>
+          </div>
+        </div>
       );
 
     return null;
@@ -50,24 +56,37 @@ class Main extends React.Component {
   render() {
     const {comments} = this.state;
     return (
-      <div className="container">
-        <h1>Welcome to ShitJoonSays!</h1>
-        <h3>What did he say?</h3>
-        <form>
-          <div className="input-group">
-            <input className="form-control" placeholder="Comment..." type="text" ref="comment" />
+      <div>
+        <div className="container">
+          <form>
+            <div className="input-group">
+              <input className="form-control" placeholder="Say Wat..." type="text" ref="comment" />
             <span className="input-group-btn">
-              <button className="btn btn-default" type="button" onClick={this.onClick}>Enter</button>
+              <button className="btn btn-default" type="button" onClick={this.onClick}>Says Joon!</button>
             </span>
-          </div>
-        </form>
-        <ul className="list-group">
-          <li className="list-group-item list-group-item-danger">Say what?!</li>
+            </div>
+          </form>
+        </div>
+        <div className="container" style={style.container}>
           {comments.map(this.renderComments)}
-        </ul>
+        </div>
       </div>
     )
   }
 }
 
+const style = {
+  container: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    height: "100vh"
+  },
+  quote: {
+    minHeight: 350,
+    background: "white",
+    flexBasis: 300,
+    margin:"15px auto"
+  }
+}
 React.render(<Main />, document.getElementById("app"));

@@ -8,8 +8,36 @@
     <script>
         System.import('app/main');
     </script>
+    <style>
+        html {
+            background: url(images/background.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: black;
+
+        }
+
+        body {
+            background-color: transparent;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            height: 125px;
+            line-height: 25px;
+        }
+
+    </style>
 </head>
 <body>
-<div id='app'><div style="text-align: center"><img src="/images/loading.gif"/></div></div>
+<div class="container" style="color:white">
+    <h1>Welcome to Shit Joon Says!</h1>
+</div>
+
+<div id='app'>
+    <div style="text-align: center">
+        <img src="/images/loading.gif" />
+    </div>
+</div>
 </body>
 </html>

@@ -278,12 +278,6 @@ System.config({
       "promise": "npm:promise@7.0.4",
       "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
     },
-    "npm:fbjs@0.2.1": {
-      "core-js": "npm:core-js@1.2.1",
-      "process": "github:jspm/nodelibs-process@0.1.1",
-      "promise": "npm:promise@7.0.4",
-      "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
-    },
     "npm:firebase@2.3.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "faye-websocket": "npm:faye-websocket@0.10.0",
@@ -381,18 +375,18 @@ System.config({
       "keycode": "npm:keycode@2.1.0",
       "lodash": "npm:lodash@3.10.1",
       "process": "github:jspm/nodelibs-process@0.1.1",
-      "react": "npm:react@0.14.0-rc1",
+      "react": "npm:react@0.13.3",
       "react-overlays": "npm:react-overlays@0.4.4",
       "uncontrollable": "npm:uncontrollable@3.1.2"
     },
     "npm:react-dom@0.14.0-beta3": {
       "fbjs": "npm:fbjs@0.1.0-alpha.4",
-      "react": "npm:react@0.14.0-beta3"
+      "react": "npm:react@0.13.3"
     },
     "npm:react-overlays@0.4.4": {
       "classnames": "npm:classnames@2.1.5",
       "dom-helpers": "npm:dom-helpers@2.4.0",
-      "react": "npm:react@0.14.0-rc1",
+      "react": "npm:react@0.13.3",
       "react-prop-types": "npm:react-prop-types@0.2.2",
       "warning": "npm:warning@2.0.0"
     },
@@ -402,17 +396,6 @@ System.config({
     "npm:react@0.13.3": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "envify": "npm:envify@3.4.0",
-      "process": "github:jspm/nodelibs-process@0.1.1"
-    },
-    "npm:react@0.14.0-beta3": {
-      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "envify": "npm:envify@3.4.0",
-      "fbjs": "npm:fbjs@0.1.0-alpha.4",
-      "process": "github:jspm/nodelibs-process@0.1.1"
-    },
-    "npm:react@0.14.0-rc1": {
-      "envify": "npm:envify@3.4.0",
-      "fbjs": "npm:fbjs@0.2.1",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:readable-stream@1.1.13": {
@@ -459,7 +442,7 @@ System.config({
     "npm:uncontrollable@3.1.2": {
       "invariant": "npm:invariant@2.1.1",
       "process": "github:jspm/nodelibs-process@0.1.1",
-      "react": "npm:react@0.14.0-rc1"
+      "react": "npm:react@0.13.3"
     },
     "npm:url@0.10.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
