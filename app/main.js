@@ -29,7 +29,7 @@ class Main extends React.Component {
     if (comment)
       return (
         <div style={style.quote}>
-          <img src={`https://unsplash.it/300/175/?random&_${comment.key}`} />
+          <img src={`https://unsplash.it/300/125/?random&_${comment.key}`} />
           <div style={{padding:40}}>
             <p>"{comment.comment}"</p>
             <div style={{color:"rgb(54, 214, 120)"}}>{comment.timestamp}</div>
@@ -83,7 +83,7 @@ const style = {
     height: "100vh"
   },
   quote: {
-    minHeight: 350,
+    minHeight: 300,
     background: "white",
     flexBasis: 300,
     margin:"15px auto"
