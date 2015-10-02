@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "jspm bundle app/main.js + app/rate.js + config.js --minify --inject",
+    "build": "jspm bundle app/main.js + app/rate.js + app/config.js + app/commentBox.js --minify --inject",
     "clean": "jspm unbundle",
     "push": "npm run build && surge"
   },

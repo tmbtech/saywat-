@@ -8,6 +8,10 @@ export default class Rate extends React.Component {
     rating: React.PropTypes.number.isRequired
   }
 
+  shouldComponentUpdate(nextProps) {
+    return this.props.rating !== nextProps.rating
+  }
+
   render() {
     const {callback, rating} = this.props;
     return (
