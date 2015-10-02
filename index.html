@@ -2,6 +2,9 @@
 <html>
 <head>
     <title>Shit Joon Says</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
@@ -9,17 +12,19 @@
         System.import('app/main');
     </script>
     <style>
-        html {
-            background: url(images/background.jpg) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            color: black;
-
-        }
-
         body {
+            /* fallback */
+            background-color: #1a82f7;
+            /* Safari 4-5, Chrome 1-9 */
+            background: -webkit-gradient(linear, left top, right top, from(#1a82f7), to(#2F2727));
+            /* Safari 5.1, Chrome 10+ */
+            background: -webkit-linear-gradient(left, #2F2727, #1a82f7);
+            /* Firefox 3.6+ */
+            background: -moz-linear-gradient(left, #2F2727, #1a82f7);
+            /* IE 10 */
+            background: -ms-linear-gradient(left, #2F2727, #1a82f7);
+            /* Opera 11.10+ */
+            background: -o-linear-gradient(left, #2F2727, #1a82f7);
             background-color: transparent;
             font-family: 'Open Sans', sans-serif;
             font-size: 14px;

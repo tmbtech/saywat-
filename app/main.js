@@ -7,7 +7,7 @@ class Main extends React.Component {
   }
 
   componentWillMount() {
-    this.firebaseRef = new Firebase('https://popping-fire-6215.firebaseio.com/shitjoonsays/');
+    this.firebaseRef = new Firebase('https://shitjoonsays.firebaseio.com/quotes/');
     this.firebaseRef.on("child_added", this.childAdded);
   }
 
