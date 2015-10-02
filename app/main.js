@@ -11,6 +11,7 @@ class Main extends React.Component {
   componentWillMount() {
     this.firebaseRef = new Firebase(config.firebaseUrl);
     this.firebaseRef.on("child_added", this.childAdded);
+    this.firebaseRef.on("child_changed", this.childChanged);
   }
 
   childAdded = (dataSnapshot) => {
@@ -27,18 +28,38 @@ class Main extends React.Component {
     this.setState({comments});
   }
 
+  childChanged = child => {
+    const comments = this.state.comments.map(comment => {
+      if(comment.key === child.key()){
+        comment.rating = child.val().rating;
+      }
+      return comment;
+    });
+
+    this.setState({comments});
+  }
+
+  vote = key => (rating, voteValue) => () => {
+    const ratingRef = this.firebaseRef.child(`${key}`);
+    ratingRef.update({rating: (rating + voteValue)});
+  }
+
   renderComments = (comment) => {
-    if (comment)
+    if (comment) {
+      const {key, comment:quote, rating = 0, timestamp} = comment;
       return (
-        <div style={style.quote} key={comment.key}>
-          <img src={`https://unsplash.it/300/125/?random&_${comment.key}`} />
-          <Rate id={comment.key} />
+        <div style={style.quote} key={key}>
+          <img src={`https://unsplash.it/300/125/?random&_${key}`} />
+          <Rate callback={this.vote(key)} rating={rating} />
+
           <div style={{padding:"20px 40px 40px"}}>
-            <p>"{comment.comment}"</p>
-            <div style={{color:"rgb(54, 214, 120)"}}>{comment.timestamp}</div>
+            <p>"{quote}"</p>
+
+            <div style={{color:"rgb(54, 214, 120)"}}>{timestamp}</div>
           </div>
         </div>
       );
+    }
 
     return null;
   }
@@ -89,7 +110,7 @@ const style = {
     minHeight: 300,
     background: "white",
     flexBasis: 300,
-    margin:"15px auto"
+    margin: "15px auto"
   }
 }
 React.render(<Main />, document.getElementById("app"));

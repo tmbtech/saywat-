@@ -4,7 +4,10 @@
   "description": "Starter kit react, systemjs, jspm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "jspm bundle app/main.js + app/rate.js + config.js --minify --inject",
+    "clean": "jspm unbundle",
+    "push": "npm run build && surge"
   },
   "repository": {
     "type": "git",
