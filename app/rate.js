@@ -19,10 +19,10 @@ export default class Rate extends React.Component {
         <a onClick={callback(rating, +1)} style={style.votes}>
           <img src="../images/upvote.png" width="20" />
         </a>
+        <span style={style.rating}>{rating}</span>
         <a onClick={callback(rating, -1)} style={style.votes}>
           <img src="../images/downvote.jpg" width="20" />
         </a>
-        <span style={style.rating}>{rating}</span>
       </div>
     )
   }
@@ -34,7 +34,8 @@ const style = {
     paddingTop: 20
   },
   votes: {
-    paddingRight: 5
+    paddingRight: 5,
+    paddingLeft: 5
   },
   style: {}
 };
