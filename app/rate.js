@@ -33,6 +33,9 @@ const style = {
     textAlign: "center",
     paddingTop: 20
   },
+  rating: {
+    display: "block"
+  },
   votes: {
     paddingRight: 5
   },
