@@ -17,7 +17,7 @@ export default class CommentBox extends React.Component {
         <img src={`https://unsplash.it/300/125/?random&_${id}`} />
         <Rate callback={callback(id)} rating={rating} />
 
-        <div style={{padding:"20px 40px 40px"}}>
+        <div style={{padding:"10px 40px 40px"}}>
           <p>"{quote}"</p>
 
           <div style={{color:"rgb(54, 214, 120)"}}>{timestamp}</div>
