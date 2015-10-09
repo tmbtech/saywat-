@@ -57,15 +57,18 @@ class Main extends React.Component {
 
   onClick = (e) => {
     e.preventDefault();
-    const comment = React.findDOMNode(this.refs.comment).value;
+    const comment = React.findDOMNode(this.refs.comment);
 
-    if (comment === "")
+    if (comment.value.trim() === "")
       return;
+
 
     this.firebaseRef.push({
       timestamp: new Date().toLocaleString(),
-      comment
-    })
+      comment: comment.value.trim()
+    });
+
+    comment.value = "";
   }
 
   render() {
