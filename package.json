@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "jspm bundle app/main.js + app/rate.js + app/config.js + app/commentBox.js --minify --inject",
+    "build": "jspm bundle app/index.js --minify --inject",
     "clean": "jspm unbundle",
     "push": "npm run build && surge"
   },
@@ -30,7 +30,11 @@
   "jspm": {
     "dependencies": {
       "firebase": "npm:firebase@^2.3.1",
-      "react": "npm:react@^0.13.3"
+      "immutable": "npm:immutable@^3.7.5",
+      "react": "npm:react@^0.14.0",
+      "react-dom": "npm:react-dom@^0.14.0",
+      "redux": "npm:redux@^3.0.4",
+      "redux-thunk": "npm:redux-thunk@^1.0.0"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
