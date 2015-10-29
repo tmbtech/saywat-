@@ -5,7 +5,6 @@ import Immutable from "immutable";
 
 export default class Main extends React.Component {
   static contextTypes = {
-    state: React.PropTypes.object,
     dispatch: React.PropTypes.func
   }
 
@@ -29,7 +28,7 @@ export default class Main extends React.Component {
   }
 
   render() {
-    const {comments} = this.context.state;
+    const {comments} = this.props;
     return (
       <div>
         <div className="container">

@@ -20,21 +20,18 @@ class App extends React.Component {
   childAdded = (dataSnapshot) => {
     const val = dataSnapshot.val();
     const key = dataSnapshot.key();
+    const comments = this.state.comments
+      .merge({[key]: val});
 
-    this.setState((prevState) => {
-      return {
-        comments: prevState.comments.merge({[key]: val})
-      };
-    })
+    this.setState({comments})
   }
 
   childChanged = child => {
-    this.setState(prevState => {
-      const key = child.key();
-      const comments = prevState.comments
-        .setIn([key, "rating"], child.val().rating);
-      return {comments};
-    });
+    const key = child.key();
+    const comments = this.state.comments
+      .setIn([key, "rating"], child.val().rating);
+
+    this.setState({comments});
   }
 
   handleDispatch({type, payload}) {
@@ -59,7 +56,7 @@ class App extends React.Component {
   render() {
     return (
       <AppContext state={this.state} onDispatch={action => this.handleDispatch(action)}>
-        <Main />
+        <Main comments={this.state.comments}/>
       </AppContext>
     )
   }
