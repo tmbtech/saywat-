@@ -19,29 +19,13 @@ export default class Main extends React.Component {
 
     dispatch({
       type: "AddComment",
-      payload: {
+      payload: Immutable.Map({
         timestamp: new Date().toLocaleString(),
         comment: comment.value.trim()
-      }
+      })
     });
 
     comment.value = "";
-  }
-
-  renderComments = (comment) => {
-    if (comment) {
-      const {key, comment:quote, rating = 0, timestamp} = comment;
-      return (
-        <CommentBox
-          key={key}
-          id={key}
-          quote={quote}
-          rating={rating}
-          timestamp={timestamp}/>
-      );
-    }
-
-    return null;
   }
 
   render() {
@@ -59,7 +43,9 @@ export default class Main extends React.Component {
           </form>
         </div>
         <div className="container" style={style.container}>
-          {comments.map(this.renderComments)}
+          {comments.map((comment, key) => (
+            <CommentBox comment={comment} id={key} key={key}/>
+          )).toArray()}
         </div>
       </div>
     )

@@ -1,6 +1,7 @@
 import React from "react";
 import config from "../config";
 import Firebase from "firebase";
+import Immutable from "immutable";
 
 export default class Rate extends React.Component {
   static propTypes = {
@@ -21,11 +22,11 @@ export default class Rate extends React.Component {
     const {id} = this.props;
     dispatch({
       type: "CastVote",
-      payload: {
+      payload: Immutable.Map({
         id,
         rating,
         value
-      }
+      })
     });
   }
 

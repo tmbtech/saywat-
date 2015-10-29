@@ -4,10 +4,11 @@ import ReactDOM from "react-dom";
 import config from "./config";
 import AppContext from "./AppContext";
 import Firebase from "firebase";
+import Immutable from "immutable"
 
 class App extends React.Component {
   state = {
-    comments: []
+    comments: Immutable.Map()
   }
 
   componentWillMount() {
@@ -19,39 +20,33 @@ class App extends React.Component {
   childAdded = (dataSnapshot) => {
     const val = dataSnapshot.val();
     const key = dataSnapshot.key();
-    const comments = [
-      {
-        ...val,
-        key: key
-      },
-      ...this.state.comments
-    ];
 
-    this.setState({comments});
+    this.setState((prevState) => {
+      return {
+        comments: prevState.comments.merge({[key]: val})
+      };
+    })
   }
 
   childChanged = child => {
-    const comments = this.state.comments.map(comment => {
-      if (comment.key === child.key()) {
-        comment.rating = child.val().rating;
-      }
-      return comment;
+    this.setState(prevState => {
+      const key = child.key();
+      const comments = prevState.comments
+        .setIn([key, "rating"], child.val().rating);
+      return {comments};
     });
-
-    this.setState({comments});
   }
 
   handleDispatch({type, payload}) {
     const actions = {
       AddComment: () => {
-        this.firebaseRef.push(payload);
+        this.firebaseRef.push(payload.toJS());
       },
       CastVote: () => {
-        const {id, rating, value} = payload;
         this.firebaseRef
-          .child(`${id}`)
+          .child(`${payload.get("id")}`)
           .update({
-            rating: (rating + value)
+            rating: (payload.get("rating") + payload.get("value"))
           });
       }
     }

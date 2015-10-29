@@ -3,28 +3,26 @@ import Rate from "./rate";
 
 export default class CommentBox extends React.Component {
   static propTypes = {
-    rating: React.PropTypes.number,
-    id: React.PropTypes.string,
-    quote: React.PropTypes.string,
-    timestamp: React.PropTypes.string
+    comment: React.PropTypes.object,
+    id: React.PropTypes.string
   }
 
   static contextTypes = {
-    state: React.PropTypes.object,
     dispatch: React.PropTypes.func
   }
 
   render() {
-    const {id, rating, quote, timestamp} = this.props;
+    const {comment, id} = this.props;
     return (
-      <div style={style.quote} key={id}>
+      <div style={style.quote}>
         <img src={`https://unsplash.it/300/125/?random&_${id}`}/>
-        <Rate id={id} rating={rating}/>
-
+        <Rate id={id} rating={comment.get("rating", 0)}/>
         <div style={{padding:"20px 40px 40px"}}>
-          <p>"{quote}"</p>
+          <p>"{comment.get("comment")}"</p>
 
-          <div style={{color:"rgb(54, 214, 120)"}}>{timestamp}</div>
+          <div style={{color:"rgb(54, 214, 120)"}}>
+            {comment.get("timestamp")}
+          </div>
         </div>
       </div>
     );
