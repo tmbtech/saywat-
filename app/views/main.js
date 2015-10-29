@@ -2,11 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import CommentBox from "../components/commentBox";
 import Immutable from "immutable";
+import shouldPureComponentUpdate from 'react-pure-render/function';
 
 export default class Main extends React.Component {
   static contextTypes = {
     dispatch: React.PropTypes.func
   }
+
+  shouldComponentUpdate = shouldPureComponentUpdate
 
   onClick = (e) => {
     e.preventDefault();

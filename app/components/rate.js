@@ -2,6 +2,7 @@ import React from "react";
 import config from "../config";
 import Firebase from "firebase";
 import Immutable from "immutable";
+import shouldPureComponentUpdate from 'react-pure-render/function';
 
 export default class Rate extends React.Component {
   static propTypes = {
@@ -13,9 +14,7 @@ export default class Rate extends React.Component {
     dispatch: React.PropTypes.func
   }
 
-  shouldComponentUpdate(nextProps) {
-    return this.props.rating !== nextProps.rating
-  }
+  shouldComponentUpdate = shouldPureComponentUpdate
 
   onClick = (rating, value) => () => {
     const {dispatch} = this.context;

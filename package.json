@@ -33,6 +33,7 @@
       "immutable": "npm:immutable@^3.7.5",
       "react": "npm:react@^0.14.0",
       "react-dom": "npm:react-dom@^0.14.0",
+      "react-pure-render": "npm:react-pure-render@^1.0.2",
       "redux": "npm:redux@^3.0.4",
       "redux-thunk": "npm:redux-thunk@^1.0.0"
     },

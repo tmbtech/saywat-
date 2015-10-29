@@ -1,5 +1,6 @@
 import React from "react";
 import Rate from "./rate";
+import shouldPureComponentUpdate from 'react-pure-render/function';
 
 export default class CommentBox extends React.Component {
   static propTypes = {
@@ -10,6 +11,8 @@ export default class CommentBox extends React.Component {
   static contextTypes = {
     dispatch: React.PropTypes.func
   }
+
+  shouldComponentUpdate = shouldPureComponentUpdate
 
   render() {
     const {comment, id} = this.props;

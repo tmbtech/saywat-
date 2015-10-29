@@ -17,14 +17,15 @@ System.config({
   },
 
   map: {
-    "babel": "npm:babel-core@5.8.29",
+    "babel": "npm:babel-core@5.8.32",
     "babel-runtime": "npm:babel-runtime@5.8.29",
     "core-js": "npm:core-js@1.2.3",
     "firebase": "npm:firebase@2.3.1",
     "immutable": "npm:immutable@3.7.5",
-    "react": "npm:react@0.14.0",
+    "react": "npm:react@0.14.1",
     "react-bootstrap": "npm:react-bootstrap@0.25.2",
-    "react-dom": "npm:react-dom@0.14.0",
+    "react-dom": "npm:react-dom@0.14.1",
+    "react-pure-render": "npm:react-pure-render@1.0.2",
     "redux": "npm:redux@3.0.4",
     "redux-thunk": "npm:redux-thunk@1.0.0",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -388,24 +389,24 @@ System.config({
       "keycode": "npm:keycode@2.1.0",
       "lodash": "npm:lodash@3.10.1",
       "process": "github:jspm/nodelibs-process@0.1.2",
-      "react": "npm:react@0.14.0",
+      "react": "npm:react@0.14.1",
       "react-overlays": "npm:react-overlays@0.4.4",
       "uncontrollable": "npm:uncontrollable@3.1.2"
     },
-    "npm:react-dom@0.14.0": {
-      "react": "npm:react@0.14.0"
+    "npm:react-dom@0.14.1": {
+      "react": "npm:react@0.14.1"
     },
     "npm:react-overlays@0.4.4": {
       "classnames": "npm:classnames@2.1.5",
       "dom-helpers": "npm:dom-helpers@2.4.0",
-      "react": "npm:react@0.14.0",
+      "react": "npm:react@0.14.1",
       "react-prop-types": "npm:react-prop-types@0.2.2",
       "warning": "npm:warning@2.0.0"
     },
     "npm:react-prop-types@0.2.2": {
       "warning": "npm:warning@2.0.0"
     },
-    "npm:react@0.14.0": {
+    "npm:react@0.14.1": {
       "envify": "npm:envify@3.4.0",
       "fbjs": "npm:fbjs@0.3.2",
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -460,7 +461,7 @@ System.config({
     "npm:uncontrollable@3.1.2": {
       "invariant": "npm:invariant@2.1.1",
       "process": "github:jspm/nodelibs-process@0.1.2",
-      "react": "npm:react@0.14.0"
+      "react": "npm:react@0.14.1"
     },
     "npm:url@0.10.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
