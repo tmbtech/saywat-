@@ -45,9 +45,14 @@ export default class Main extends React.Component {
           </form>
         </div>
         <div className="container" style={style.container}>
-          {comments.map((comment, key) => (
-            <CommentBox comment={comment} id={key} key={key}/>
-          )).toArray()}
+          {comments
+            .sort((a, b) => {
+              let aTime = new Date(a.get("timestamp"));
+              let bTime = new Date(b.get("timestamp"));
+              return bTime.getTime() - aTime.getTime();
+            }).map((comment, key) => (
+              <CommentBox comment={comment} id={key} key={key}/>
+            )).toArray()}
         </div>
       </div>
     )
