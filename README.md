@@ -19,5 +19,12 @@ Run your server then browse to http://localhost:8080
 live-server
 ```
 
+## "flux" via context.
+Using a simple flux based on https://github.com/tmbtech/Context-Flux
+
+## FAQ
+- Q: Why don't I see my changes?
+- A: I usually forget to unbundle jspm before pushing to master. Run `npm run clean`
+
 
 

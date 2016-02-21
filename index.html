@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>React Start Kit</title>
+    <title>Shit Joon Says</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
     <script>
-        System.import('app/main');
+        System.import('app/index');
     </script>
+    <style>
+        body {
+            /* fallback */
+            background-color: #1a82f7;
+            /* Safari 4-5, Chrome 1-9 */
+            background: -webkit-gradient(linear, left top, right top, from(#1a82f7), to(#2F2727));
+            /* Safari 5.1, Chrome 10+ */
+            background: -webkit-linear-gradient(left, #2F2727, #1a82f7);
+            /* Firefox 3.6+ */
+            background: -moz-linear-gradient(left, #2F2727, #1a82f7);
+            /* IE 10 */
+            background: -ms-linear-gradient(left, #2F2727, #1a82f7);
+            /* Opera 11.10+ */
+            background: -o-linear-gradient(left, #2F2727, #1a82f7);
+            background-color: transparent;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            height: 125px;
+            line-height: 25px;
+        }
+
+    </style>
 </head>
 <body>
-<div id='app'></div>
+<div class="container" style="color:white">
+    <h1>Welcome to Shit Joon Says!</h1>
+</div>
+
+<div id='app'>
+    <div style="text-align: center">
+        <img src="/images/loading.gif" />
+    </div>
+</div>
 </body>
 </html>

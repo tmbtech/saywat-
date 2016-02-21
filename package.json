@@ -4,7 +4,10 @@
   "description": "Starter kit react, systemjs, jspm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "jspm bundle app/index.js --minify --inject",
+    "clean": "jspm unbundle",
+    "push": "npm run build && surge"
   },
   "repository": {
     "type": "git",
@@ -27,7 +30,12 @@
   "jspm": {
     "dependencies": {
       "firebase": "npm:firebase@^2.3.1",
-      "react": "npm:react@^0.13.3",
+      "immutable": "npm:immutable@^3.7.5",
+      "react": "npm:react@^0.14.0",
+      "react-dom": "npm:react-dom@^0.14.0",
+      "react-pure-render": "npm:react-pure-render@^1.0.2",
+      "redux": "npm:redux@^3.0.4",
+      "redux-thunk": "npm:redux-thunk@^1.0.0",
       "systemjs": "npm:systemjs@^0.19.22"
     },
     "devDependencies": {
