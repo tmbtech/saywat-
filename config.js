@@ -24,7 +24,7 @@ System.config({
     "immutable": "npm:immutable@3.7.5",
     "react": "npm:react@0.14.1",
     "react-bootstrap": "npm:react-bootstrap@0.25.2",
-    "react-dom": "npm:react-dom@0.14.0-beta3",
+    "react-dom": "npm:react-dom@0.14.1",
     "react-pure-render": "npm:react-pure-render@1.0.2",
     "redux": "npm:redux@3.0.4",
     "redux-thunk": "npm:redux-thunk@1.0.0",
@@ -262,7 +262,7 @@ System.config({
     },
     "npm:es6-module-loader@0.17.11": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "process": "github:jspm/nodelibs-process@0.1.1",
+      "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0",
       "when": "npm:when@3.7.7"
@@ -288,14 +288,6 @@ System.config({
       "url": "github:jspm/nodelibs-url@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0",
       "websocket-driver": "npm:websocket-driver@0.6.2"
-    },
-    "npm:fbjs@0.1.0-alpha.4": {
-      "core-js": "npm:core-js@1.2.3",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "path": "github:jspm/nodelibs-path@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "promise": "npm:promise@7.0.4",
-      "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
     },
     "npm:fbjs@0.3.2": {
       "core-js": "npm:core-js@1.2.3",
@@ -412,8 +404,7 @@ System.config({
       "react-overlays": "npm:react-overlays@0.4.4",
       "uncontrollable": "npm:uncontrollable@3.1.2"
     },
-    "npm:react-dom@0.14.0-beta3": {
-      "fbjs": "npm:fbjs@0.1.0-alpha.4",
+    "npm:react-dom@0.14.1": {
       "react": "npm:react@0.14.1"
     },
     "npm:react-overlays@0.4.4": {
@@ -471,7 +462,7 @@ System.config({
     "npm:systemjs@0.19.22": {
       "es6-module-loader": "npm:es6-module-loader@0.17.11",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "process": "github:jspm/nodelibs-process@0.1.1",
+      "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0",
       "when": "npm:when@3.7.7"
     },
@@ -522,7 +513,7 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:when@3.7.7": {
-      "process": "github:jspm/nodelibs-process@0.1.1"
+      "process": "github:jspm/nodelibs-process@0.1.2"
     }
   }
 });
