@@ -24,6 +24,7 @@ System.config({
     "react": "npm:react@0.13.3",
     "react-bootstrap": "npm:react-bootstrap@0.25.2",
     "react-dom": "npm:react-dom@0.14.0-beta3",
+    "systemjs": "npm:systemjs@0.19.22",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -248,6 +249,13 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1",
       "through": "npm:through@2.3.8"
     },
+    "npm:es6-module-loader@0.17.11": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0",
+      "util": "github:jspm/nodelibs-util@0.1.0",
+      "when": "npm:when@3.7.7"
+    },
     "npm:esprima-fb@13001.1001.0-dev-harmony-fb": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1"
@@ -449,6 +457,13 @@ System.config({
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
+    "npm:systemjs@0.19.22": {
+      "es6-module-loader": "npm:es6-module-loader@0.17.11",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0",
+      "when": "npm:when@3.7.7"
+    },
     "npm:through@2.3.8": {
       "process": "github:jspm/nodelibs-process@0.1.1",
       "stream": "github:jspm/nodelibs-stream@0.1.0"
@@ -490,6 +505,9 @@ System.config({
       "websocket-extensions": "npm:websocket-extensions@0.1.1"
     },
     "npm:websocket-extensions@0.1.1": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:when@3.7.7": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     }
   }

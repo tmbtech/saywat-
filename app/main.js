@@ -66,7 +66,12 @@ class Main extends React.Component {
             </div>
           </form>
         </div>
-        <div>{comments.map(this.renderComments)}</div>
+        <div>
+          {comments
+            .sort((a, b) => { a.timestamp > b.timestamp })
+            .map(this.renderComments)
+          }
+        </div>
       </div>
     )
   }

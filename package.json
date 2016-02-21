@@ -27,7 +27,8 @@
   "jspm": {
     "dependencies": {
       "firebase": "npm:firebase@^2.3.1",
-      "react": "npm:react@^0.13.3"
+      "react": "npm:react@^0.13.3",
+      "systemjs": "npm:systemjs@^0.19.22"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
